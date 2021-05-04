@@ -3,8 +3,21 @@
     <div class="dialog">
         <img class="logo" [src]="me" />
         <div class="title">
-            I'm {{title}}!
+            Hi, I'm <b>{{title}}</b>!
         </div>
+        <div class="about">My name is <b>Valerio Pisà</b>, an Italian code <b>enthusiast</b>, working as <b>Digital
+                Solution Architect</b> at <b>Hermes Reply</b></div>
         <router-outlet></router-outlet>
+        <div class="links">
+            <a href="https://github.com/vlzn">
+                <fa-icon [icon]="['fab', 'github']"></fa-icon>
+            </a>
+            <a href="https://www.linkedin.com/in/vlzn/">
+                <fa-icon [icon]="['fab', 'linkedin']"></fa-icon>
+            </a>
+            <a href="https://t.me/imvlzn">
+                <fa-icon [icon]="['fab', 'telegram-plane']"></fa-icon>
+            </a>
+        </div>
     </div>
 </div>

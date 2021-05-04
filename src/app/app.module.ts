@@ -3,14 +3,11 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { RouterModule, Routes } from '@angular/router';
+import { FaIconLibrary, FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import * as FaIcons from '@fortawesome/free-solid-svg-icons';
+import * as Brands from '@fortawesome/free-brands-svg-icons';
 
 const routes: Routes = [];
-
-@NgModule({
-  imports: [RouterModule.forRoot(routes, { relativeLinkResolution: 'legacy' })],
-  exports: [RouterModule]
-})
-export class AppRoutingModule { }
 
 @NgModule({
   declarations: [
@@ -18,9 +15,19 @@ export class AppRoutingModule { }
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    FontAwesomeModule,
+    RouterModule.forRoot(routes, { relativeLinkResolution: 'legacy' })
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+  constructor(faIconLibrary: FaIconLibrary) {
+    faIconLibrary.addIcons(
+      FaIcons.faInfoCircle,
+      Brands.faGithub,
+      Brands.faLinkedin,
+      Brands.faTelegramPlane
+    );
+  }
+}
