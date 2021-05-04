@@ -16,6 +16,9 @@ if ["%text%"] == [""] goto no_text
 set msg="COMMIT %mydate% %mytime%: %text%"
 echo %msg%
 
+echo Build before publish ...
+@call npm run build
+
 git add --all
 
 echo File added, begin commit (message %msg%)
