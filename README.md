@@ -1,2 +1,1 @@
-# vlzn.github.io
-Personal page
+# VLZN Personal WebSite (and experiment)

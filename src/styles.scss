@@ -1,0 +1,20 @@
+@import "./styles/fonts/spartan.css";
+
+body {
+    font-family: "Spartan", Arial, Helvetica, sans-serif;
+
+    & > vlzn-root {
+        background-color: #123d9c;
+        display: flex;
+        flex-direction: row;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        right: 0px;
+        bottom: 0px;
+        margin: 0px;
+        padding: 0px;
+        height: 100vh;
+        align-items: center;
+    }
+}
